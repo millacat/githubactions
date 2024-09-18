@@ -25,7 +25,7 @@ jobs:
           name: CODE # name of artifact to download
           path: . # where to download it to
       - name: Run linting
-        uses: super-linter/super-linter-slim@v5
+        uses: super-linter/super-linter/slim@v5
         env:
           DEFAULT_BRANCH: main
           # To report GitHub Actions status checks
