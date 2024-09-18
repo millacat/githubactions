@@ -10,3 +10,11 @@ jobs:
       - run: ci/build-app.sh
       - name: Run unit test Test
         run: ci/unit-test-app.sh
+      - name: Upload repo (upload a Build Artifact) # Name of the step
+        uses: actions/upload-artifact@v4 # Action to use
+        with: # Parameters for the action
+            name: CODE # Name of the artifact to upload. Optional. The default is 'artifact
+            path: . # A file, directory, or wildcard pattern that describes what to upload. Required.
+#  Linter:
+#   runs-on: ubuntu-latest
+#    steps:
